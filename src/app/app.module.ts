@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -28,6 +29,7 @@ import { CourseInfoComponent } from './views/courses/course-info/course-info.com
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     FontAwesomeModule,
     RouterModule.forRoot([...ROUTES]),
   ],

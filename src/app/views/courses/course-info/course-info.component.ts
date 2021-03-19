@@ -10,7 +10,7 @@ import { CourseService } from '../course.service';
 export class CourseInfoComponent implements OnInit {
 
   course: Course;
-
+  
   faSave = faSave;
 
   constructor(
@@ -19,10 +19,22 @@ export class CourseInfoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.course = this.courseService.retrieveByID(+this.activateRoute.snapshot.paramMap.get('id'));
+    this.courseService.retrieveByID(+this.activateRoute.snapshot.paramMap.get('id')).subscribe({
+      next: course => this.course = course,
+      error: err => {
+        alert('Oops... Algo deu errado!');
+        console.log('Error:', err);
+      }
+    });
   }
 
   save(): void {
-    this.courseService.save(this.course);
+    this.courseService.save(this.course).subscribe({
+      next: () => alert('Curso salvo com sucesso!!!'),
+      error: err => {
+        alert('Oops... Algo deu errado!');
+        console.log('Error:', err);
+      }
+    });
   }
 }
