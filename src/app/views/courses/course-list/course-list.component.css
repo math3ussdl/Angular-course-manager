@@ -1,0 +1,16 @@
+.icon {
+  color: var(--color-primary);
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: var(--color-primary-hover);
+}
+
+.trash {
+  color: #e92424;
+}
+
+.trash:hover {
+  color: #df6d6d;
+}
