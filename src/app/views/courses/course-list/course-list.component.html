@@ -52,15 +52,25 @@
       </td>
       <td>
         <div class="d-flex p-2">
-          <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary">
+          <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary mr-2">
             <fa-icon
               class="mr-2"
               [icon]="faEdit"
-              title="Editar curso"
+              title="Edit course"
             ></fa-icon>
 
             Edit
           </a>
+
+          <button (click)="deleteByID(course.id)" class="btn btn-danger">
+            <fa-icon
+              class="mr-2"
+              [icon]="faTrash"
+              title="Delete course"
+            ></fa-icon>
+
+            Delete
+          </button>
         </div>
       </td>
     </tr>

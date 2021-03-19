@@ -37,7 +37,20 @@ export class CourseListComponent implements OnInit {
         this.filteredCourses = this._courses;
       },
       error: err => {
-        alert('Oops... Algo deu errado!');
+        alert('Oops... Something wrong!');
+        console.log('Error:', err);
+      }
+    });
+  }
+
+  deleteByID(courseId: number): void {
+    this.courseService.deleteByID(courseId).subscribe({
+      next: () => {
+        alert('Course sucessful removed!');
+        this.retrieveAll();
+      },
+      error: err => {
+        alert('Oops... Something wrong!');
         console.log('Error:', err);
       }
     });
