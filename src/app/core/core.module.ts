@@ -5,9 +5,12 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { CourseModule } from '../views/courses/course.module';
+import ROUTES from 'src/routes';
+import { Error404Component } from './components/error-404/error-404.component';
 
 @NgModule({
   declarations: [
+    Error404Component,
     NavBarComponent,
     FooterComponent
   ],
@@ -15,7 +18,7 @@ import { CourseModule } from '../views/courses/course.module';
     CommonModule,
     CourseModule,
     FontAwesomeModule,
-    RouterModule
+    RouterModule.forChild([...ROUTES.coreRoutes])
   ],
   exports: [
     NavBarComponent,

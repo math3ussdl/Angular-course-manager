@@ -8,13 +8,11 @@ import ROUTES from '../routes';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CourseModule } from './views/courses/course.module';
-import { Error404Component } from './views/error-404/error-404.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Error404Component,
+    AppComponent
   ],
   imports: [
     BrowserModule,
