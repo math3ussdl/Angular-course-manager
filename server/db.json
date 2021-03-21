@@ -1,17 +1,6 @@
 {
   "courses": [
     {
-      "id": 1,
-      "name": "Angular: CLI Test",
-      "imageUrl": "/assets/images/cli.png",
-      "price": 49.9,
-      "code": "CLI-1187",
-      "duration": 150,
-      "rating": 4.5,
-      "description": "All has you beginning, the Angular too, knows your cli and have a great job with this tool!",
-      "releaseDate": "December, 2, 2020"
-    },
-    {
       "id": 2,
       "name": "Angular: Forms",
       "imageUrl": "/assets/images/forms.png",
