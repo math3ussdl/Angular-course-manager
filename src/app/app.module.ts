@@ -1,4 +1,4 @@
-import { ReplacePipe } from './pipes/replace.pipe';
+import { ReplacePipe } from './shared/pipes/replace.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
